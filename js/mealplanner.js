@@ -31,7 +31,7 @@ fetch("../data/" + encodeURIComponent(weekId) + ".json")
     document.getElementById("meals").innerHTML = data.meals.map((meal) => {
       const [day, name, tag, minutes, url, emoji, image] = meal;
       const photo = image
-        ? `<img src="${escapeHtml(image)}" alt="${escapeHtml(name)}" loading="lazy" decoding="async">`
+        ? `<img src="${escapeHtml(image)}" alt="${escapeHtml(name)}" loading="lazy" decoding="async" onerror="this.replaceWith(document.createTextNode(this.dataset.fallback))" data-fallback="${escapeHtml(emoji)}">`
         : `<span aria-hidden="true">${escapeHtml(emoji)}</span>`;
       return `
         <article class="card recipe-card">
