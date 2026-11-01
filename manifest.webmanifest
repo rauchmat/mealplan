@@ -1,0 +1,18 @@
+{
+  "name": "Rauchski Meal Planner",
+  "short_name": "Rauchski",
+  "description": "Weniger überlegen. Mehr genießen.",
+  "start_url": "/mealplan/",
+  "scope": "/mealplan/",
+  "display": "standalone",
+  "background_color": "#faf7ef",
+  "theme_color": "#faf7ef",
+  "icons": [
+    {
+      "src": "/mealplan/assets/ruby-app-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
