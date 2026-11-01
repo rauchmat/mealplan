@@ -17,7 +17,14 @@
       "Vegetarisch",
       40,
       "https://kochkarussell.com/kuerbisrisotto/",
-      "🎃"
+      "🎃",
+      {
+        "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Pumpkin_risotto.jpg?width=960",
+        "source": "https://commons.wikimedia.org/wiki/File:Pumpkin_risotto.jpg",
+        "credit": "Foto: Oliver Tacke (o.tacke) · CC0",
+        "license": "CC0 1.0",
+        "note": "Beispielfoto – nicht von der verlinkten Rezeptseite"
+      }
     ],
     [
       "Mittwoch",
