@@ -3,3 +3,7 @@
 .logo{display:inline-flex;align-items:center;gap:10px;line-height:1.15}
 .brand-mark{flex-shrink:0}
 @media(max-width:480px){.logo{font-size:1rem}.brand-mark{width:36px;height:36px}}
+
+/* Keep the decorative header badge from wrapping on narrow screens. */
+header > .pill{white-space:nowrap;flex-shrink:0}
+@media(max-width:600px){header > .pill{display:none}}
