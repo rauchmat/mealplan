@@ -2,6 +2,7 @@
 const weekId = location.pathname.split("/").pop().replace(".html", "");
 let data;
 let servings = 3;
+const escapeHtml = (value) => String(value).replace(/[&<>"\x27]/g, char => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","\x27":"&#39;"}[char]));
 const format = (item) => {
   const [category, name, amount, unit] = item;
   if (amount === null) return name;
@@ -27,15 +28,22 @@ fetch("../data/" + encodeURIComponent(weekId) + ".json")
   .then(response => { if (!response.ok) throw new Error("Wochenplan nicht gefunden"); return response.json(); })
   .then(week => {
     data = week;
-    document.getElementById("meals").innerHTML = data.meals.map(([day, name, tag, minutes, url, emoji]) => `
-      <article class="card">
-        <div class="photo" role="img" aria-label="Illustration: ${name}">${emoji}</div>
-        <div class="card-body">
-          <div class="eyebrow">${day}</div><h3>${name}</h3>
-          <p class="meta"><span class="pill">${tag}</span> &nbsp; ⏱ ${minutes} Min.</p>
-          ${url ? `<a href="${url}" target="_blank" rel="noopener">Zum Rezept ↗</a>` : `<span class="note">Hausrezept · 180 °C, 15–20 Min. Lachs</span>`}
-        </div>
-      </article>`).join("");
+    document.getElementById("meals").innerHTML = data.meals.map((meal) => {
+      const [day, name, tag, minutes, url, emoji, image] = meal;
+      const photo = image
+        ? `<img src="${escapeHtml(image)}" alt="${escapeHtml(name)}" loading="lazy" decoding="async">`
+        : `<span aria-hidden="true">${escapeHtml(emoji)}</span>`;
+      return `
+        <article class="card recipe-card">
+          <div class="photo ${image ? "has-image" : "photo-fallback"}" role="img" aria-label="${escapeHtml(name)}">${photo}</div>
+          <div class="card-body">
+            <div class="eyebrow">${escapeHtml(day)}</div>
+            <h3>${escapeHtml(name)}</h3>
+            <p class="meta"><span class="pill">${escapeHtml(tag)}</span><span class="recipe-time">⏱ ${Number(minutes)} Min.</span></p>
+            ${url ? `<a class="recipe-link" href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">Rezept ansehen ↗</a>` : `<span class="note">Hausrezept · Lachs bei 180 °C ca. 15–20 Min. garen</span>`}
+          </div>
+        </article>`;
+    }).join("");
     render();
   })
   .catch(() => { document.getElementById("meals").textContent = "Wochenplan konnte nicht geladen werden."; });
