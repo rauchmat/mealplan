@@ -23,8 +23,18 @@ function renderMeals() {
   const container = document.getElementById("meals");
   container.replaceChildren();
   for (const [day, name, tag, minutes, url, emoji, image] of data.meals) {
-    const card = document.createElement("article");
-    card.className = "card recipe-card";
+    const card = document.createElement(url ? "a" : "button");
+    card.className = "card recipe-card recipe-card-clickable";
+    if (url) {
+      card.href = url;
+      card.target = "_blank";
+      card.rel = "noopener noreferrer";
+      card.setAttribute("aria-label", name + " – Rezept öffnen");
+    } else {
+      card.type = "button";
+      card.setAttribute("aria-label", name + " – Zubereitung anzeigen");
+      card.addEventListener("click", () => window.alert("Ofenlachs mit Kartoffelpüree & Karotten\\n\\nLachs bei 180 °C ca. 15–20 Minuten garen. Kartoffeln kochen und mit Milch und Butter pürieren. Karotten weich dünsten. Mit Salz, Pfeffer und Zitrone abschmecken."));
+    }
     const photo = document.createElement("div");
     photo.className = "photo";
     photo.setAttribute("role", "img");
@@ -49,20 +59,10 @@ function renderMeals() {
       escapeHtml(name) + '</h3><p class="meta"><span class="pill">' +
       escapeHtml(tag) + '</span><span class="recipe-time">⏱ ' +
       escapeHtml(minutes) + ' Min.</span></p>';
-    if (url) {
-      const link = document.createElement("a");
-      link.className = "recipe-link";
-      link.href = url;
-      link.target = "_blank";
-      link.rel = "noopener noreferrer";
-      link.textContent = "Rezept ansehen ↗";
-      body.append(link);
-    } else {
-      const note = document.createElement("span");
-      note.className = "note";
-      note.textContent = "Hausrezept · Lachs bei 180 °C ca. 15–20 Min. garen";
-      body.append(note);
-    }
+    const note = document.createElement("span");
+    note.className = url ? "recipe-link" : "note";
+    note.textContent = url ? "Rezept ansehen ↗" : "Hausrezept · Zubereitung anzeigen ↗";
+    body.append(note);
     card.append(photo, body);
     container.append(card);
   }
