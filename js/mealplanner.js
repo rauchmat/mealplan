@@ -23,17 +23,15 @@ function renderMeals() {
   const container = document.getElementById("meals");
   container.replaceChildren();
   for (const [day, name, tag, minutes, url, emoji, image] of data.meals) {
-    const card = document.createElement(url ? "a" : "button");
+    const card = document.createElement("a");
     card.className = "card recipe-card recipe-card-clickable";
     if (url) {
       card.href = url;
-      card.target = "_blank";
-      card.rel = "noopener noreferrer";
+      if (/^https?:\/\//i.test(url)) {
+        card.target = "_blank";
+        card.rel = "noopener noreferrer";
+      }
       card.setAttribute("aria-label", name + " – Rezept öffnen");
-    } else {
-      card.type = "button";
-      card.setAttribute("aria-label", name + " – Zubereitung anzeigen");
-      card.addEventListener("click", () => window.alert("Ofenlachs mit Kartoffelpüree & Karotten\\n\\nLachs bei 180 °C ca. 15–20 Minuten garen. Kartoffeln kochen und mit Milch und Butter pürieren. Karotten weich dünsten. Mit Salz, Pfeffer und Zitrone abschmecken."));
     }
     const photo = document.createElement("div");
     photo.className = "photo";
@@ -61,8 +59,8 @@ function renderMeals() {
       escapeHtml(tag) + '</span><span class="recipe-time">⏱ ' +
       escapeHtml(minutes) + ' Min.</span></p>';
     const note = document.createElement("span");
-    note.className = url ? "recipe-link" : "note";
-    note.textContent = url ? "Rezept ansehen ↗" : "Hausrezept · Zubereitung anzeigen ↗";
+    note.className = "recipe-link";
+    note.textContent = url && url.startsWith("../recipes/") ? "Hausrezept ansehen ↗" : "Rezept ansehen ↗";
     body.append(note);
     if (image && typeof image === "object" && image.src && image.source && image.license) {
       const credit = document.createElement("small");
@@ -83,7 +81,7 @@ document.getElementById("copy").onclick = async () => {
   catch { window.prompt("Einkaufsliste kopieren:", list); }
 };
 document.getElementById("meals").textContent = "Rezepte werden geladen …";
-fetch("../data/" + encodeURIComponent(weekId) + ".json?v=8", {cache:"no-store"})
+fetch("../data/" + encodeURIComponent(weekId) + ".json?v=11", {cache:"no-store"})
   .then(response => { if (!response.ok) throw new Error("HTTP " + response.status); return response.json(); })
   .then(week => { data = week; renderMeals(); render(); })
   .catch(error => {
