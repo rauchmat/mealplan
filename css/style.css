@@ -32,3 +32,25 @@ header > .pill{white-space:nowrap;flex-shrink:0}
 .home-logo .brand-mark{width:72px;height:72px;object-fit:contain}
 .home-header + main .hero{padding-top:40px}
 @media(max-width:600px){.home-logo{font-size:1.25rem}.home-logo .brand-mark{width:58px;height:58px}.home-header + main .hero{padding-top:30px}}
+
+/* Homepage editorial layout */
+.home-hero{padding-top:40px;padding-bottom:32px}
+.home-hero h1{max-width:900px;font-size:clamp(2.6rem,6.3vw,4.5rem)}
+.accent{color:var(--orange)}
+.featured-week{background:#fffdf8}
+.featured-link{padding:clamp(22px,4vw,38px);display:flex;flex-direction:column;gap:12px}
+.featured-week h2{font-size:clamp(1.65rem,3vw,2.35rem);line-height:1.15;margin:0}
+.featured-week .meta{margin:0}
+.week-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:14px 0}
+.week-stat{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:#f3f5ed;border-radius:14px;padding:14px 8px}
+.week-stat strong{font-size:1.45rem;line-height:1.2}
+.week-stat span{font-size:.75rem;color:var(--muted)}
+.week-action{font-weight:750;color:var(--green);margin-top:5px}
+.archive-section{margin-top:48px}
+.archive-section h2{margin-bottom:16px}
+.archive-week h3{font-size:1.25rem;line-height:1.25;margin:9px 0}
+.archive-week .weeklink{height:100%}
+.archive-week .meta{margin-bottom:16px}
+.featured-week a:focus-visible,.archive-week a:focus-visible{outline:3px solid var(--orange);outline-offset:-3px}
+@media(hover:hover){.featured-week:hover,.archive-week:hover{box-shadow:0 10px 26px #293c3210}}
+@media(max-width:480px){.week-stats{gap:6px}.week-stat{padding:12px 4px}.week-stat strong{font-size:1.2rem}.week-stat span{font-size:.66rem}.home-hero{padding-top:28px}}
