@@ -57,3 +57,10 @@ header > .pill{white-space:nowrap;flex-shrink:0}
 
 /* Licensed photo provenance; recipe link stays the primary card action. */
 .photo-credit{display:block;color:var(--muted);font-size:.68rem;line-height:1.35;margin-top:6px}
+
+/* Shared header sizing and compact weekly hero */
+.week-hero{padding-top:34px;padding-bottom:18px}
+.week-hero h1{font-size:clamp(2.6rem,6.3vw,4.5rem);max-width:900px}
+.shopping-jump{display:inline-block;margin-top:6px;font-weight:750;text-underline-offset:4px}
+#shopping-list{scroll-margin-top:24px}
+@media(max-width:600px){.week-hero{padding-top:26px;padding-bottom:14px}.recipe-card .photo-fallback{aspect-ratio:16/7}}
