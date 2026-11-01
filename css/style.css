@@ -64,3 +64,18 @@ header > .pill{white-space:nowrap;flex-shrink:0}
 .shopping-jump{display:inline-block;margin-top:6px;font-weight:750;text-underline-offset:4px}
 #shopping-list{scroll-margin-top:24px}
 @media(max-width:600px){.week-hero{padding-top:26px;padding-bottom:14px}.recipe-card .photo-fallback{aspect-ratio:16/7}}
+
+/* Dedicated house-recipe pages */
+.recipe-detail{max-width:1020px}
+.recipe-breadcrumb{font-size:.85rem;color:var(--muted);margin-top:22px}
+.recipe-breadcrumb a{text-underline-offset:3px}
+.recipe-facts{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-top:20px;color:var(--muted);font-size:.9rem}
+.recipe-detail-grid{display:grid;grid-template-columns:minmax(220px,1fr) minmax(0,1.8fr);gap:20px;align-items:start}
+.recipe-detail-grid .panel{padding:clamp(20px,3vw,30px)}
+.recipe-detail-grid h2{margin-top:0}
+.ingredient-list,.recipe-steps{padding-left:22px}
+.ingredient-list li{padding:7px 0;border-bottom:1px solid var(--line)}
+.recipe-steps li{padding:0 0 18px 6px}
+.recipe-steps li::marker{font-weight:800;color:var(--green)}
+.recipe-back{margin-top:30px;font-weight:750}
+@media(max-width:700px){.recipe-detail-grid{grid-template-columns:1fr}.recipe-detail .week-hero h1{font-size:clamp(2.3rem,8vw,3.7rem)}}
