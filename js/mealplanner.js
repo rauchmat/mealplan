@@ -11,6 +11,8 @@ const format = item => {
 };
 function render() {
   document.getElementById("servings").textContent = servings;
+  const bringLink = document.getElementById("bring");
+  if (bringLink) bringLink.href = "../bring/" + encodeURIComponent(weekId) + "-" + servings + ".html";
   const groups = [...new Set(data.ingredients.map(x => x[0]))];
   document.getElementById("shopping").innerHTML = groups.map(group =>
     '<div class="group"><h3>' + escapeHtml(group) + '</h3>' +
