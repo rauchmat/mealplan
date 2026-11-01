@@ -25,3 +25,10 @@ header > .pill{white-space:nowrap;flex-shrink:0}
 .recipe-card-clickable:focus-visible{outline:3px solid var(--orange);outline-offset:4px}
 .recipe-card-clickable .recipe-link{color:var(--green);text-decoration:underline}
 @media(hover:hover){.recipe-card-clickable:hover .recipe-link{text-decoration-thickness:2px}}
+
+/* Homepage: Ruby takes center stage; avoid repeating the full product name. */
+.home-header{padding-top:12px}
+.home-logo{gap:14px;font-size:1.55rem;letter-spacing:-.035em}
+.home-logo .brand-mark{width:72px;height:72px;object-fit:contain}
+.home-header + main .hero{padding-top:40px}
+@media(max-width:600px){.home-logo{font-size:1.25rem}.home-logo .brand-mark{width:58px;height:58px}.home-header + main .hero{padding-top:30px}}
