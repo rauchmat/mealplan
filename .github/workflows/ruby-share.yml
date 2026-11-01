@@ -1,4 +1,4 @@
-name: Generate Ruby sharing preview and app icons
+name: Generate Ruby sharing preview and iOS app icons
 on:
   push:
     branches: [main]
