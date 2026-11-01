@@ -39,9 +39,10 @@ function renderMeals() {
     photo.className = "photo";
     photo.setAttribute("role", "img");
     photo.setAttribute("aria-label", name);
-    if (image) {
+    if (image && typeof image === "object" && image.src && image.source && image.license) {
       const img = document.createElement("img");
-      img.src = image;
+      img.src = image.src;
+      img.referrerPolicy = "no-referrer";
       img.alt = name;
       img.loading = "lazy";
       img.addEventListener("error", () => {
@@ -63,6 +64,12 @@ function renderMeals() {
     note.className = url ? "recipe-link" : "note";
     note.textContent = url ? "Rezept ansehen ↗" : "Hausrezept · Zubereitung anzeigen ↗";
     body.append(note);
+    if (image && typeof image === "object" && image.src && image.source && image.license) {
+      const credit = document.createElement("small");
+      credit.className = "photo-credit";
+      credit.textContent = image.note ? image.note + " · " + image.credit : image.credit;
+      body.append(credit);
+    }
     card.append(photo, body);
     container.append(card);
   }
@@ -76,7 +83,7 @@ document.getElementById("copy").onclick = async () => {
   catch { window.prompt("Einkaufsliste kopieren:", list); }
 };
 document.getElementById("meals").textContent = "Rezepte werden geladen …";
-fetch("../data/" + encodeURIComponent(weekId) + ".json?v=4", {cache:"no-store"})
+fetch("../data/" + encodeURIComponent(weekId) + ".json?v=8", {cache:"no-store"})
   .then(response => { if (!response.ok) throw new Error("HTTP " + response.status); return response.json(); })
   .then(week => { data = week; renderMeals(); render(); })
   .catch(error => {
