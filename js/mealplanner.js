@@ -76,7 +76,7 @@ document.getElementById("copy").onclick = async () => {
   catch { window.prompt("Einkaufsliste kopieren:", list); }
 };
 document.getElementById("meals").textContent = "Rezepte werden geladen …";
-fetch("../data/" + encodeURIComponent(weekId) + ".json?v=3", {cache:"no-store"})
+fetch("../data/" + encodeURIComponent(weekId) + ".json?v=4", {cache:"no-store"})
   .then(response => { if (!response.ok) throw new Error("HTTP " + response.status); return response.json(); })
   .then(week => { data = week; renderMeals(); render(); })
   .catch(error => {
