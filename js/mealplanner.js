@@ -1,5 +1,6 @@
 "use strict";
-const data = JSON.parse(document.getElementById("week-data").textContent);
+const weekId = location.pathname.split("/").pop().replace(".html", "");
+let data;
 let servings = 3;
 const format = (item) => {
   const [category, name, amount, unit] = item;
@@ -8,14 +9,6 @@ const format = (item) => {
   const display = Number.isInteger(value) ? String(value) : value.toLocaleString("de-AT", {maximumFractionDigits: 1});
   return display + " " + unit + " " + name;
 };
-document.getElementById("meals").innerHTML = data.meals.map(([day,name,tag,minutes,url,emoji]) => `
-  <article class="card">
-    <div class="photo" role="img" aria-label="Illustration: ${name}">${emoji}</div>
-    <div class="card-body"><div class="eyebrow">${day}</div><h3>${name}</h3>
-      <p class="meta"><span class="pill">${tag}</span> &nbsp; ⏱ ${minutes} Min.</p>
-      ${url ? `<a href="${url}" target="_blank" rel="noopener">Zum Rezept ↗</a>` : "<span class='note'>Hausrezept · 180 °C, 15–20 Min. Lachs</span>"}
-    </div>
-  </article>`).join("");
 function render() {
   document.getElementById("servings").textContent = servings;
   const groups = [...new Set(data.ingredients.map(x => x[0]))];
