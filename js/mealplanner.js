@@ -23,4 +23,19 @@ document.getElementById("copy").onclick = async () => {
   try { await navigator.clipboard.writeText(list); document.getElementById("copy").textContent = "Kopiert ✓"; }
   catch { window.prompt("Einkaufsliste kopieren:", list); }
 };
-render();
+fetch("../data/" + encodeURIComponent(weekId) + ".json")
+  .then(response => { if (!response.ok) throw new Error("Wochenplan nicht gefunden"); return response.json(); })
+  .then(week => {
+    data = week;
+    document.getElementById("meals").innerHTML = data.meals.map(([day, name, tag, minutes, url, emoji]) => `
+      <article class="card">
+        <div class="photo" role="img" aria-label="Illustration: ${name}">${emoji}</div>
+        <div class="card-body">
+          <div class="eyebrow">${day}</div><h3>${name}</h3>
+          <p class="meta"><span class="pill">${tag}</span> &nbsp; ⏱ ${minutes} Min.</p>
+          ${url ? `<a href="${url}" target="_blank" rel="noopener">Zum Rezept ↗</a>` : `<span class="note">Hausrezept · 180 °C, 15–20 Min. Lachs</span>`}
+        </div>
+      </article>`).join("");
+    render();
+  })
+  .catch(() => { document.getElementById("meals").textContent = "Wochenplan konnte nicht geladen werden."; });
