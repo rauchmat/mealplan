@@ -1,0 +1,14 @@
+{
+  "defaultServings": 3,
+  "minServings": 2,
+  "maxServings": 4,
+  "days": [
+    "Montag",
+    "Dienstag",
+    "Mittwoch",
+    "Donnerstag",
+    "Freitag"
+  ],
+  "minVegetarianMeals": 2,
+  "publishOnlyAfterApproval": true
+}
