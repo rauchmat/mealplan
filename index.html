@@ -1,28 +1,24 @@
 <!doctype html>
 <html lang="de">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#faf7ef">
-  <title>Rauchski Meal Planner</title>
-  <link rel="stylesheet" href="css/style.css?v=6">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#faf7ef">
+<title>Rauchski Meal Planner</title>
+<link rel="stylesheet" href="css/style.css?v=7">
 </head>
 <body>
-  <div class="wrap">
-    <header class="home-header"><a class="logo home-logo" href="index.html" aria-label="Rauchski Meal Planner – Startseite"><img class="brand-mark" src="assets/ruby-minimal.svg" width="72" height="72" alt="Ruby, unser Shiba mit Heiligenschein"><span>Rauchski Meal Planner</span></a><span class="pill">What\'s cooking?</span></header>
-    <main>
-      <section class="hero">
-        <div class="eyebrow">Essen planen statt grübeln</div>
-        <h1>Meal Planner<span style="color:#e6ad75">.</span></h1>
-        <p class="quote">Weniger überlegen. Mehr genießen.</p>
-      </section>
-      <section>
-        <h2>Unsere Wochenpläne</h2>
-        <div class="grid" id="week-list"><p class="note">Wochenpläne werden geladen …</p></div>
-      </section>
-    </main>
-    <footer class="foot">Est. 2026 · Rauchski</footer>
-  </div>
-  <script src="js/index.js" defer></script>
-</body>
-</html>
+<div class="wrap">
+<header class="home-header"><a class="logo home-logo" href="index.html" aria-label="Rauchski Meal Planner – Startseite"><img class="brand-mark" src="assets/ruby-minimal.svg" width="72" height="72" alt="Ruby, unser Shiba mit Heiligenschein"><span>Rauchski Meal Planner</span></a><span class="pill">What's cooking?</span></header>
+<main>
+<section class="hero home-hero">
+<div class="eyebrow">Gut essen. Weniger planen.</div>
+<h1>Was gibt's diese Woche<span class="accent">?</span></h1>
+<p class="quote">Weniger überlegen. Mehr genießen.</p>
+</section>
+<section aria-label="Aktueller Wochenplan"><div id="current-week"><p class="note">Aktueller Wochenplan wird geladen …</p></div></section>
+<section class="archive-section" aria-labelledby="archive-title"><h2 id="archive-title">Vergangene Wochen</h2><div class="grid archive-grid" id="week-archive"><p class="note">Hier wächst unsere Rezeptsammlung.</p></div></section>
+</main>
+<footer class="foot">Est. 2026 · Rauchski <span aria-hidden="true">·</span> Mit Ruby im Herzen gekocht.</footer>
+</div>
+<script src="js/index.js?v=7" defer></script>
+</body></html>
