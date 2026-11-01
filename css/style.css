@@ -19,3 +19,9 @@ header > .pill{white-space:nowrap;flex-shrink:0}
 @media(hover:hover){.recipe-card:hover{transform:translateY(-2px);box-shadow:0 10px 26px #293c3212}}
 @media(prefers-reduced-motion:reduce){.recipe-card{transition:none}}
 @media print{.recipe-card .photo{height:80px;aspect-ratio:auto}}
+
+/* Entire recipe cards are accessible interactive targets. */
+.recipe-card-clickable{width:100%;padding:0;color:var(--ink);text-align:left;text-decoration:none;font:inherit;cursor:pointer;appearance:none;-webkit-appearance:none}
+.recipe-card-clickable:focus-visible{outline:3px solid var(--orange);outline-offset:4px}
+.recipe-card-clickable .recipe-link{color:var(--green);text-decoration:underline}
+@media(hover:hover){.recipe-card-clickable:hover .recipe-link{text-decoration-thickness:2px}}
