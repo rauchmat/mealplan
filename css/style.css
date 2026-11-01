@@ -54,3 +54,6 @@ header > .pill{white-space:nowrap;flex-shrink:0}
 .featured-week a:focus-visible,.archive-week a:focus-visible{outline:3px solid var(--orange);outline-offset:-3px}
 @media(hover:hover){.featured-week:hover,.archive-week:hover{box-shadow:0 10px 26px #293c3210}}
 @media(max-width:480px){.week-stats{gap:6px}.week-stat{padding:12px 4px}.week-stat strong{font-size:1.2rem}.week-stat span{font-size:.66rem}.home-hero{padding-top:28px}}
+
+/* Licensed photo provenance; recipe link stays the primary card action. */
+.photo-credit{display:block;color:var(--muted);font-size:.68rem;line-height:1.35;margin-top:6px}
