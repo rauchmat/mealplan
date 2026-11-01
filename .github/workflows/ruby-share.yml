@@ -1,0 +1,46 @@
+name: Generate Ruby sharing preview
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'assets/ruby-minimal.svg'
+      - '.github/workflows/ruby-share.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --disable-pip-version-check cairosvg pillow
+      - name: Build PNG social card
+        run: |
+          python - <<'PY'
+          from PIL import Image, ImageDraw, ImageFont
+          import cairosvg, io
+          canvas=Image.new("RGB",(1200,630),"#faf7ef")
+          logo=Image.open(io.BytesIO(cairosvg.svg2png(url="assets/ruby-minimal.svg",output_width=310,output_height=310))).convert("RGBA")
+          canvas.paste(logo,(445,72),logo)
+          draw=ImageDraw.Draw(canvas)
+          font="/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
+          title=ImageFont.truetype(font,68)
+          subtitle=ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",32)
+          label="Rauchski Meal Planner"
+          box=draw.textbbox((0,0),label,font=title)
+          draw.text(((1200-(box[2]-box[0]))/2,395),label,font=title,fill="#293c32")
+          line="Weniger überlegen. Mehr genießen."
+          box=draw.textbbox((0,0),line,font=subtitle)
+          draw.text(((1200-(box[2]-box[0]))/2,500),line,font=subtitle,fill="#466c56")
+          canvas.save("assets/ruby-share.png",optimize=True)
+          PY
+      - name: Commit generated image
+        run: |
+          git add assets/ruby-share.png
+          if ! git diff --cached --quiet; then
+            git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" commit -m "Generate PNG preview with Ruby logo"
+            git push
+          fi
