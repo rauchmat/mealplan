@@ -38,3 +38,25 @@ Beide Familienmitglieder können mit ihrem eigenen ChatGPT-Account und verbunden
 - `AGENTS.md`: detaillierte Arbeitsanleitung für ChatGPT
 
 Die Website wird mit GitHub Pages veröffentlicht. Nach Änderungen kann die Veröffentlichung verzögert sein.
+
+## Rezeptkatalog und Import
+
+- `data/recipes.json`: persistenter, versionierter Rezeptkatalog mit Quellen, Prüfstatus und manuellen Ergänzungen.
+- `data/preferences.json`: bestätigte Vorlieben und belegte, noch unbestätigte Geschmackssignale. Leere Werte bedeuten unbekannt.
+- `tools/recipe_import/`: Python-Importer für bereinigte JSON-/CSV-Kataloge und öffentliche Rezeptseiten.
+- [Importanleitung und Datenmodell](docs/recipe-import.md): Eingabeformate, inkrementelle Prüfung, Datenschutz und Grenzen bei Instagram/TikTok.
+
+```sh
+python3.12 -m venv work/venv
+work/venv/bin/python -m pip install -r requirements-test.txt
+work/venv/bin/python -m tools.recipe_import --validate
+work/venv/bin/python -m tools.recipe_import --input private/recipes.json --dry-run
+work/venv/bin/python -m tools.recipe_import --input private/recipes.json
+work/venv/bin/python -m pytest -q
+```
+
+`--dry-run` ruft Links ab und schreibt einen lokalen Bericht, verändert aber den Katalog nicht. `--offline` nimmt nur Eingaben auf. Wiederholte Importe respektieren Prüfintervalle und manuelle Ergänzungen. Der Importer erstellt oder veröffentlicht keine Wochenpläne und führt keine Git-Schreibvorgänge aus.
+
+Der WhatsApp-Rohchat bleibt außerhalb des Repositorys. Nur geprüfte, bereinigte Eingabekataloge verwenden. `private/`, `imports/`, `reports/` und `work/` sind ignoriert; bereits getrackte Dateien schützt `.gitignore` nicht. Vor einem Commit den Diff auf personenbezogene Inhalte prüfen.
+
+Die angekündigten 201 Links und 33 zusätzlichen Gerichtnamen liegen diesem Stand noch nicht als Importdateien vor. Der Katalog startet mit dem vorhandenen Hausrezept, aus dessen lokaler HTML-Datei extrahiert. Eine vollständige Live-Linkprüfung der Sammlung ist daher noch offen.

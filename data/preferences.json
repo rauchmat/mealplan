@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "confirmed": {
+    "liked_ingredients": [],
+    "disliked_ingredients": [],
+    "preferred_cuisines": [],
+    "dietary_restrictions": [],
+    "max_total_minutes": null
+  },
+  "inferred": [],
+  "planning": {
+    "known_meals_target": null,
+    "new_meals_target": null,
+    "avoid_repeat_weeks": null
+  }
+}

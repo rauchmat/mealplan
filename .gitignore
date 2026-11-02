@@ -1,0 +1,13 @@
+# Private inputs and temporary HTTP data must never be published by GitHub Pages.
+/work/
+/private/
+/imports/
+/reports/
+**/_chat.txt
+**/WhatsApp Chat*
+**/WhatsApp-Chat*
+__pycache__/
+.pytest_cache/
+.venv/
+*.egg-info/
+*.json.lock

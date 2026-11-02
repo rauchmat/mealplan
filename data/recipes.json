@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "recipes": [
+    {
+      "id": "recipe-ff6063ab0a64238f",
+      "urls": [
+        "https://rauchmat.github.io/mealplan/recipes/ofenlachs-kartoffelpueree-karotten.html"
+      ],
+      "platform": "website",
+      "data": {
+        "title": "Ofenlachs mit Kartoffelpüree & Karotten",
+        "ingredients": [
+          "500 g Lachsfilet",
+          "750 g Kartoffeln",
+          "ca. 400 g Karotten",
+          "250 ml Milch",
+          "ca. 40 g Butter",
+          "1 Zitrone",
+          "Salz und Pfeffer",
+          "Etwas Öl für den Lachs"
+        ],
+        "servings": 3.0,
+        "yield_text": "3 Portionen",
+        "prep_minutes": null,
+        "cook_minutes": null,
+        "total_minutes": 30.0,
+        "category": "Fisch",
+        "tags": [],
+        "instructions": [
+          "Vorbereiten. Backofen auf 180 °C Ober-/Unterhitze vorheizen. Kartoffeln schälen und würfeln. Karotten schälen und in Stücke schneiden.",
+          "Kartoffeln kochen. In Salzwasser etwa 15–20 Minuten weich kochen.",
+          "Lachs garen. Lachs in eine leicht geölte Auflaufform legen, mit Salz, Pfeffer und etwas Zitronensaft würzen. Im Ofen etwa 15–20 Minuten garen, bis er durch ist.",
+          "Karotten dünsten. Mit wenig Wasser und etwas Butter in einem Topf etwa 10–15 Minuten weich dünsten.",
+          "Püree machen. Kartoffeln abgießen und mit warmer Milch und Butter stampfen. Mit Salz und Pfeffer abschmecken.",
+          "Servieren. Lachs mit Kartoffelpüree und Karotten anrichten und nach Belieben mit Zitrone beträufeln."
+        ]
+      },
+      "provenance": {
+        "title": {
+          "url": "https://rauchmat.github.io/mealplan/recipes/ofenlachs-kartoffelpueree-karotten.html",
+          "method": "house_html"
+        },
+        "ingredients": {
+          "url": "https://rauchmat.github.io/mealplan/recipes/ofenlachs-kartoffelpueree-karotten.html",
+          "method": "house_html"
+        },
+        "servings": {
+          "url": "https://rauchmat.github.io/mealplan/recipes/ofenlachs-kartoffelpueree-karotten.html",
+          "method": "house_html"
+        },
+        "yield_text": {
+          "url": "https://rauchmat.github.io/mealplan/recipes/ofenlachs-kartoffelpueree-karotten.html",
+          "method": "house_html"
+        },
+        "total_minutes": {
+          "url": "https://rauchmat.github.io/mealplan/recipes/ofenlachs-kartoffelpueree-karotten.html",
+          "method": "house_html"
+        },
+        "category": {
+          "url": "https://rauchmat.github.io/mealplan/recipes/ofenlachs-kartoffelpueree-karotten.html",
+          "method": "house_html"
+        },
+        "instructions": {
+          "url": "https://rauchmat.github.io/mealplan/recipes/ofenlachs-kartoffelpueree-karotten.html",
+          "method": "house_html"
+        }
+      },
+      "manual": {},
+      "experience": "unrated",
+      "reviewed_for_planning": false,
+      "check": {
+        "status": "local_source",
+        "last_attempt": null,
+        "last_success": "2026-11-02T21:09:43+00:00",
+        "next_attempt": null,
+        "http_status": null,
+        "error": null,
+        "etag": null,
+        "last_modified": null,
+        "validator_url": null
+      },
+      "quality": {
+        "completeness": "complete",
+        "missing": [],
+        "issues": [],
+        "planning_ready": false
+      }
+    }
+  ]
+}
