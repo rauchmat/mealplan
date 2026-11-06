@@ -1,0 +1,359 @@
+{
+  "week": "2026-W46",
+  "date": "6.–12. November 2026",
+  "quote": "Von Kürbis bis Polenta – sieben Tage, sechs Kochabende und einmal Gans außer Haus.",
+  "meals": [
+    [
+      "Freitag",
+      "Kürbisrisotto mit Salbei & Parmesan",
+      "Vegetarisch",
+      40,
+      "https://kochkarussell.com/kuerbisrisotto/",
+      "🎃"
+    ],
+    [
+      "Samstag",
+      "Ganslessen auswärts · kein Kochen",
+      "Auswärts",
+      0,
+      "",
+      "🪿"
+    ],
+    [
+      "Sonntag",
+      "Jamies mexikanische Tomatensuppe mit Chili-Nachos",
+      "Vegetarisch",
+      25,
+      "https://www.jamieoliver.com/inspiration/jamie-s-mexican-tomato-soup/",
+      "🍅"
+    ],
+    [
+      "Montag",
+      "Kokos-Kichererbsen-Curry mit Spinat",
+      "Vegan",
+      30,
+      "https://www.sonnentor.com/de-at/rezepte-tipps/rezepte/kichererbsencurry-mit-spinat-und-kokosmilch",
+      "🍛"
+    ],
+    [
+      "Dienstag",
+      "Ofenlachs mit Kartoffelpüree & Karotten",
+      "Fisch",
+      30,
+      "../recipes/ofenlachs-kartoffelpueree-karotten.html",
+      "🐟"
+    ],
+    [
+      "Mittwoch",
+      "Rindergeschnetzeltes mit Champignons & Buchweizen",
+      "Fleisch",
+      35,
+      "../recipes/rindergeschnetzeltes-buchweizen.html",
+      "🥩"
+    ],
+    [
+      "Donnerstag",
+      "Zitronenhuhn mit Parmesan-Polenta & Ofengemüse",
+      "Fleisch",
+      40,
+      "../recipes/zitronenhuhn-polenta.html",
+      "🍗"
+    ]
+  ],
+  "ingredients": [
+    [
+      "Gemüse & Obst",
+      "Hokkaidokürbis",
+      600,
+      "g"
+    ],
+    [
+      "Gemüse & Obst",
+      "Salbei",
+      1,
+      "Bund"
+    ],
+    [
+      "Gemüse & Obst",
+      "Zwiebeln",
+      5,
+      "Stück"
+    ],
+    [
+      "Gemüse & Obst",
+      "Knoblauch",
+      1,
+      "Knolle"
+    ],
+    [
+      "Gemüse & Obst",
+      "Frühlingszwiebeln",
+      1,
+      "Bund"
+    ],
+    [
+      "Gemüse & Obst",
+      "Koriander frisch",
+      1,
+      "Bund"
+    ],
+    [
+      "Gemüse & Obst",
+      "Minze frisch",
+      0.5,
+      "Bund"
+    ],
+    [
+      "Gemüse & Obst",
+      "Limetten",
+      2,
+      "Stück"
+    ],
+    [
+      "Gemüse & Obst",
+      "Cherrytomaten",
+      150,
+      "g"
+    ],
+    [
+      "Gemüse & Obst",
+      "Avocado",
+      1,
+      "Stück"
+    ],
+    [
+      "Gemüse & Obst",
+      "Ingwer",
+      1,
+      "Stück"
+    ],
+    [
+      "Gemüse & Obst",
+      "Spinat",
+      300,
+      "g"
+    ],
+    [
+      "Gemüse & Obst",
+      "Karotten",
+      400,
+      "g"
+    ],
+    [
+      "Gemüse & Obst",
+      "Zitronen",
+      3,
+      "Stück"
+    ],
+    [
+      "Gemüse & Obst",
+      "Champignons",
+      400,
+      "g"
+    ],
+    [
+      "Gemüse & Obst",
+      "Petersilie",
+      1,
+      "Bund"
+    ],
+    [
+      "Gemüse & Obst",
+      "Zucchini",
+      2,
+      "Stück"
+    ],
+    [
+      "Gemüse & Obst",
+      "Brokkoli",
+      1,
+      "Stück"
+    ],
+    [
+      "Gemüse & Obst",
+      "Rosmarin",
+      1,
+      "Bund"
+    ],
+    [
+      "Protein",
+      "Lachsfilet",
+      500,
+      "g"
+    ],
+    [
+      "Protein",
+      "Rindergeschnetzeltes",
+      450,
+      "g"
+    ],
+    [
+      "Protein",
+      "Hühnerbrust",
+      500,
+      "g"
+    ],
+    [
+      "Kühlregal",
+      "Vegetarischer Parmesan",
+      120,
+      "g"
+    ],
+    [
+      "Kühlregal",
+      "Butter",
+      90,
+      "g"
+    ],
+    [
+      "Kühlregal",
+      "Milch",
+      500,
+      "ml"
+    ],
+    [
+      "Kühlregal",
+      "Naturjoghurt",
+      190,
+      "g"
+    ],
+    [
+      "Kühlregal",
+      "Feta",
+      25,
+      "g"
+    ],
+    [
+      "Kühlregal",
+      "Cheddar",
+      40,
+      "g"
+    ],
+    [
+      "Kühlregal",
+      "Sauerrahm",
+      150,
+      "g"
+    ],
+    [
+      "Vorrat",
+      "Risottoreis",
+      250,
+      "g"
+    ],
+    [
+      "Vorrat",
+      "Basmatireis",
+      300,
+      "g"
+    ],
+    [
+      "Vorrat",
+      "Buchweizen",
+      240,
+      "g"
+    ],
+    [
+      "Vorrat",
+      "Polenta",
+      240,
+      "g"
+    ],
+    [
+      "Vorrat",
+      "Kartoffeln",
+      750,
+      "g"
+    ],
+    [
+      "Vorrat",
+      "Kichererbsen",
+      2,
+      "Dosen"
+    ],
+    [
+      "Vorrat",
+      "Kokosmilch",
+      400,
+      "ml"
+    ],
+    [
+      "Vorrat",
+      "Gehackte Tomaten",
+      600,
+      "g"
+    ],
+    [
+      "Vorrat",
+      "Geröstete Paprika aus dem Glas",
+      340,
+      "g"
+    ],
+    [
+      "Vorrat",
+      "Tortillachips",
+      130,
+      "g"
+    ],
+    [
+      "Vorrat",
+      "Gemüsebrühe",
+      1800,
+      "ml"
+    ],
+    [
+      "Vorrat",
+      "Jalapeños eingelegt",
+      2,
+      "TL"
+    ],
+    [
+      "Vorrat",
+      "Senf",
+      2,
+      "TL"
+    ],
+    [
+      "Vorrat",
+      "Speisestärke",
+      1,
+      "TL"
+    ],
+    [
+      "Gewürze & Basics",
+      "Olivenöl",
+      null,
+      ""
+    ],
+    [
+      "Gewürze & Basics",
+      "Salz",
+      null,
+      ""
+    ],
+    [
+      "Gewürze & Basics",
+      "Pfeffer",
+      null,
+      ""
+    ],
+    [
+      "Gewürze & Basics",
+      "Currypulver",
+      null,
+      ""
+    ],
+    [
+      "Gewürze & Basics",
+      "Kreuzkümmel",
+      null,
+      ""
+    ],
+    [
+      "Gewürze & Basics",
+      "Paprikapulver",
+      null,
+      ""
+    ]
+  ]
+}
