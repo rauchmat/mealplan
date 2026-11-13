@@ -1,0 +1,323 @@
+{
+  "week": "2026-W47",
+  "date": "14.–20. November 2026",
+  "quote": "Einmal Ofenliebe, einmal Feierabendküche – und zweimal bleibt die Küche kalt.",
+  "meals": [
+    [
+      "Samstag",
+      "Offen · bestellen oder essen gehen",
+      "Auswärts",
+      0,
+      "",
+      "🍕"
+    ],
+    [
+      "Sonntag",
+      "Balsamico-glasiertes Schweinslungenbratenfilet mit Äpfeln, Birnen & Süßkartoffeln",
+      "Fleisch",
+      50,
+      "../recipes/balsamico-lungenbraten-apfel-birne-suesskartoffel.html",
+      "🍐"
+    ],
+    [
+      "Montag",
+      "Essen gehen · Matthias isst Reste",
+      "Kein Kochen",
+      0,
+      "",
+      "🍽️"
+    ],
+    [
+      "Dienstag",
+      "Ofen-Feta mit Kichererbsen, Tomaten & Bulgur",
+      "Vegetarisch",
+      35,
+      "../recipes/ofenfeta-kichererbsen-bulgur.html",
+      "🧀"
+    ],
+    [
+      "Mittwoch",
+      "Ingwer-Huhn mit Gemüse & Soba-Nudeln",
+      "Fleisch",
+      30,
+      "../recipes/ingwerhuhn-soba-gemuese.html",
+      "🍜"
+    ],
+    [
+      "Donnerstag",
+      "Cremespinat mit Rösti & Knacker",
+      "Fleisch",
+      30,
+      "../recipes/cremespinat-roesti-knacker.html",
+      "🥬"
+    ],
+    [
+      "Freitag",
+      "Kabeljau mit Kräuterkruste, Zitronen-Couscous & Erbsen",
+      "Fisch",
+      30,
+      "../recipes/kabeljau-kraeuterkruste-zitronencouscous.html",
+      "🐟"
+    ]
+  ],
+  "ingredients": [
+    [
+      "Gemüse & Obst",
+      "Äpfel",
+      2,
+      "Stück"
+    ],
+    [
+      "Gemüse & Obst",
+      "Birnen",
+      2,
+      "Stück"
+    ],
+    [
+      "Gemüse & Obst",
+      "Brokkoli",
+      1,
+      "Stück"
+    ],
+    [
+      "Gemüse & Obst",
+      "Cherrytomaten",
+      500,
+      "g"
+    ],
+    [
+      "Gemüse & Obst",
+      "Frühlingszwiebeln",
+      1,
+      "Bund"
+    ],
+    [
+      "Gemüse & Obst",
+      "Ingwer",
+      30,
+      "g"
+    ],
+    [
+      "Gemüse & Obst",
+      "Karotten",
+      300,
+      "g"
+    ],
+    [
+      "Gemüse & Obst",
+      "Kartoffeln",
+      750,
+      "g"
+    ],
+    [
+      "Gemüse & Obst",
+      "Knoblauch",
+      6,
+      "Zehen"
+    ],
+    [
+      "Gemüse & Obst",
+      "Petersilie",
+      1,
+      "Bund"
+    ],
+    [
+      "Gemüse & Obst",
+      "Rosmarin",
+      2,
+      "Zweige"
+    ],
+    [
+      "Gemüse & Obst",
+      "Rote Zwiebeln",
+      3,
+      "Stück"
+    ],
+    [
+      "Gemüse & Obst",
+      "Süßkartoffeln",
+      750,
+      "g"
+    ],
+    [
+      "Gemüse & Obst",
+      "Zitronen",
+      2,
+      "Stück"
+    ],
+    [
+      "Gemüse & Obst",
+      "Zucchini",
+      1,
+      "Stück"
+    ],
+    [
+      "Gemüse & Obst",
+      "Zwiebeln",
+      1,
+      "Stück"
+    ],
+    [
+      "Gewürze & Basics",
+      "Muskatnuss",
+      null,
+      ""
+    ],
+    [
+      "Gewürze & Basics",
+      "Öl zum Braten",
+      null,
+      ""
+    ],
+    [
+      "Gewürze & Basics",
+      "Olivenöl",
+      null,
+      ""
+    ],
+    [
+      "Gewürze & Basics",
+      "Oregano",
+      null,
+      ""
+    ],
+    [
+      "Gewürze & Basics",
+      "Pfeffer",
+      null,
+      ""
+    ],
+    [
+      "Gewürze & Basics",
+      "Salz",
+      null,
+      ""
+    ],
+    [
+      "Gewürze & Basics",
+      "Sesamöl",
+      null,
+      ""
+    ],
+    [
+      "Kühlregal",
+      "Butter",
+      30,
+      "g"
+    ],
+    [
+      "Kühlregal",
+      "Ei",
+      1,
+      "Stück"
+    ],
+    [
+      "Kühlregal",
+      "Feta",
+      300,
+      "g"
+    ],
+    [
+      "Protein",
+      "Hühnerbrust",
+      500,
+      "g"
+    ],
+    [
+      "Protein",
+      "Kabeljaufilet",
+      600,
+      "g"
+    ],
+    [
+      "Protein",
+      "Knacker",
+      3,
+      "Stück"
+    ],
+    [
+      "Protein",
+      "Schweinslungenbratenfilet",
+      600,
+      "g"
+    ],
+    [
+      "Tiefkühl",
+      "Cremespinat (TK)",
+      750,
+      "g"
+    ],
+    [
+      "Tiefkühl",
+      "Erbsen (TK)",
+      300,
+      "g"
+    ],
+    [
+      "Vorrat",
+      "Balsamico-Essig",
+      60,
+      "ml"
+    ],
+    [
+      "Vorrat",
+      "Bulgur",
+      240,
+      "g"
+    ],
+    [
+      "Vorrat",
+      "Couscous",
+      240,
+      "g"
+    ],
+    [
+      "Vorrat",
+      "Gemüsebrühe",
+      850,
+      "ml"
+    ],
+    [
+      "Vorrat",
+      "Honig",
+      45,
+      "g"
+    ],
+    [
+      "Vorrat",
+      "Kichererbsen",
+      2,
+      "Dosen"
+    ],
+    [
+      "Vorrat",
+      "Semmelbrösel",
+      60,
+      "g"
+    ],
+    [
+      "Vorrat",
+      "Sesam",
+      20,
+      "g"
+    ],
+    [
+      "Vorrat",
+      "Soba-Nudeln",
+      240,
+      "g"
+    ],
+    [
+      "Vorrat",
+      "Sojasauce",
+      60,
+      "ml"
+    ],
+    [
+      "Vorrat",
+      "Speisestärke",
+      20,
+      "g"
+    ]
+  ]
+}
